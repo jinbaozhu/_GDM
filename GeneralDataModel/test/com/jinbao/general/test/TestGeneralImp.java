@@ -49,8 +49,8 @@ public class TestGeneralImp {
 	
 	@Test
 	public void testModels(){
-		GeneralModel M2 = new GeneralModel("M2",null);
-		GeneralObject meta = new GeneralObject("Ancestor");
+		//GeneralModel M2 = new GeneralModel("M2",null);
+		//GeneralObject meta = new GeneralObject("Ancestor");
 		
 //		nameProperty.setValue(new Value("Jinbao"));
 //		
