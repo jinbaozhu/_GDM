@@ -7,9 +7,12 @@ public class Identity implements IdentityI {
 	private Long id;
 	private String name;
 	
+	public Identity(String name){
+		this.name = name;
+	}
+	
 	public static Identity newRegistered(String name){
-		Identity identity = new Identity();
-		identity.setName(name);
+		Identity identity = new Identity(name);
 		
 		IdentityManager idmgr = IdentityManager.instance();
 		idmgr.register(identity);

@@ -4,6 +4,9 @@ import com.jinbao.general.interfaces.GeneralObjectI;
 
 public class GeneralModel extends GeneralObject {
 
+	public GeneralModel(String name) {
+		super(name);
+	}
 	public GeneralModel(String name,GeneralObjectI meta) {
 		super(name, meta);
 	}

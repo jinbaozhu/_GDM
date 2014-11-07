@@ -7,7 +7,7 @@ public class GeneralBase implements GeneralI {
 	IdentityI 	identity;
 
 	GeneralBase(String name){
-		identity = new Identity();
+		identity = Identity.newRegistered(name);	
 	}
 	
 	@Override

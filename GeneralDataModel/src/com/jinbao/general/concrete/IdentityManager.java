@@ -2,7 +2,9 @@ package com.jinbao.general.concrete;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
 
 import com.jinbao.general.interfaces.IdentityI;
 
@@ -66,5 +68,15 @@ public class IdentityManager {
 		if(instance == null)
 			instance = new IdentityManager();
 		return instance;
+	}
+	
+	public String toString(){
+		String content = "";
+		Iterator<Entry<Long, IdentityI>> iter = hukou.entrySet().iterator();
+		while(iter.hasNext()){
+			Entry<Long, IdentityI> entry = iter.next();
+			content += String.format("{%d,%s}",entry.getKey(),entry.getValue().name()); 
+		}
+		return content;
 	}
 }

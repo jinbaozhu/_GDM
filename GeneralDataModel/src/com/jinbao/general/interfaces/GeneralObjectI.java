@@ -8,8 +8,8 @@ public interface GeneralObjectI extends GeneralI {
 	
 	
 	public abstract GeneralPropertyI getProperty(Long propId);
-	public abstract boolean addProperty(GeneralPropertyI property);
-	public abstract boolean removeProperty(Long propId);
+	public abstract GeneralPropertyI addProperty(GeneralPropertyI property);
+	public abstract GeneralPropertyI removeProperty(Long propId);
 	
 	// meta
 	public abstract GeneralObjectI meta();
@@ -18,8 +18,16 @@ public interface GeneralObjectI extends GeneralI {
 	public abstract void setOwner(GeneralObjectI owner);
 	public abstract GeneralObjectI owner();
 	
-	// ownees
+	// ownee
 	public abstract GeneralObjectI getOwnee(Long objctId);
 	public abstract List<GeneralObjectI> getOwnees(GeneralObjectI parent);
-
+	public abstract GeneralObjectI addOwnee(GeneralObjectI ownee);
+	public abstract GeneralObjectI removeOwnee(GeneralObjectI ownee);
+	
+	// reference
+	public abstract List<GeneralObjectI> addReference(String refenceName, List<GeneralObjectI> reference);
+	public abstract List<GeneralObjectI> getReference(String refenceName);
+	public abstract List<GeneralObjectI> removetReference(String refenceName);
+	public abstract GeneralObjectI addReference(String refenceName, GeneralObjectI reference);
+	public abstract GeneralObjectI getFirstReference(String refenceName);
 }
