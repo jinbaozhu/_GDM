@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model xmlns="http://m3.gdm.org/xmlns" Id="10000001" Name="M3" MetaParent="null" 
+		NickName="Ancestor Model">
+	<Object Id="11000001" Name="root" MetaParent="null" 
+			NickName="ancestor" Type="RootObject" />
+</Model>

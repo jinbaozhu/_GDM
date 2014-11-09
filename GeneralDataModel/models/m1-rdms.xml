@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model xmlns="http://m1.logic.gdm.org/xmlns" Id="10000003" Name="M1" MetaParent="10000002" 
+	NickName="Logic Relational Model" ParantName="M2" >
+	<Object Id="11000004" Name="Domain" MetaParent="11000002" 
+		ParantName="Object" NickName="Domain" Type="Object" IsTop="true" />
+		<Reference ParentDomain="11000004" />
+	<Object Id="11000005" Name="Attribute" MetaParent="11000002" 
+		ParantName="Object" NickName="Attribute" Type="Object" IsTop="false" />
+		<Reference ParentDomain="11000004" />
+	<Object Id="11000006" Name="KeyGroup" MetaParent="11000002" 
+		ParantName="Object" NickName="Key Group" Type="Object" IsTop="false" />
+		<Reference Reference="11000005" Name="KeyGroupMember" NickName="Key Group Member" />
+	<Object Id="11000007" Name="Entity" MetaParent="11000002" 
+		ParantName="Object" NickName="Entity" Type="Object" IsTop="true" />
+		<Ownee id="11000005" />
+	<Object Id="11000008" Name="ForeignKeyRelationship" MetaParent="11000003" 
+		ParantName="Relationship" NickName="Foreign Key Relationship" 
+		Type="Relationship" IsTop="true" />
+		<Reference Reference="11000006" Name="ParentEntity" NickName="Parent Entity" />
+		<Reference Reference="11000006" Name="ChildEntity" NickName="Child Entity" />
+		<Reference Reference="11000006" Name="ParentEntityColumns" NickName="Parent Entity Columns" />
+		<Reference Reference="11000006" Name="ChildEntityColumns" NickName="Child Entity Columns" />
+</Model>

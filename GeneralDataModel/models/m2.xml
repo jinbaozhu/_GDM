@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model xmlns="http://m2.gdm.org/xmlns" Id="10000002" Name="M2" MetaParent="10000001" 
+	NickName="Grandfather" ParantName="M3" >
+	<Object Id="11000002" Name="Object" MetaParent="11000001" 
+		ParantName="root" NickName="GDM Object" Type="Object" />
+	<Object Id="11000003" Name="Relationship" MetaParent="11000001" 
+		ParantName="root" NickName="GDM Relationship" Type="Relationship" />
+</Model>
